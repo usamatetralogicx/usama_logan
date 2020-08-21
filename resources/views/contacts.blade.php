@@ -259,11 +259,11 @@
                         <table class="table table-striped">
                             <tbody>
                                 <tr>
-                                    <td>Name</td>
+                                    <td><b>Name</b></td>
                                     <td>{{ $contact->prefix }} {{ $contact->first_name }} {{ $contact->last_name }}</td>
                                 </tr>
                                 <tr>
-                                    <td>Address</td>
+                                    <td><b>Address</b></td>
                                     <td>{{ $contact->address }}<br>
                                         {{ $contact->apt }}, {{ $contact->city }}, {{ $contact->state }}
                                     <br>
@@ -271,19 +271,19 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Email</td>
+                                    <td><b>Email</b></td>
                                     <td>{{ $contact->email }}</td>
                                 </tr>
                                 <tr>
-                                    <td>Phone</td>
+                                    <td><b>Phone</b></td>
                                     <td>{{ $contact->phone }}</td>
                                 </tr>
                                 <tr>
-                                    <td>Date Of Birthday</td>
+                                    <td><b>Date Of Birthday</b></td>
                                     <td>{{ $contact->date }}</td>
                                 </tr>
                                 <tr>
-                                    <td>Spouse/Partner</td>
+                                    <td><b>Spouse/Partner</b></td>
                                     <td>{{ $contact->spouce_prefix }} {{ $contact->spouce_first_name }} {{ $contact->spouce_last_name }}</td>
                                 </tr>
 

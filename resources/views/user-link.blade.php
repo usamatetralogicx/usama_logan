@@ -56,6 +56,37 @@
         .m-b-md {
             margin-bottom: 30px;
         }
+
+        .navbar-nav .nav-link, .navbar-nav .nav-link:hover,.navbar-brand, .navbar-brand:hover {
+            color: white;
+        }
+        .card-header {
+            background-color: #00265d;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            padding-top: 0.4375rem;
+            padding-bottom: 0.4375rem;
+            position: relative;
+            text-align: left;
+            color:white;
+            font-size:16px;
+        }
+        .btn {
+            border:0px solid white;
+            border-radius: 0;
+        }
+        .form-control {
+            border-radius: 0;
+        }
+        .btn-primary {
+            background-color: #00265d;
+            color: #fff;
+        }
+        .btn-primary:hover {
+            background-color: #00265d;
+            color: #fff;
+            opacity: 0.8;
+        }
     </style>
 
 </head>

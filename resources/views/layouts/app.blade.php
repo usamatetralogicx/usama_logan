@@ -41,7 +41,7 @@
         .form-control {
             border-radius: 0;
         }
-        .btn-primary {
+        .btn-primary, .badge-primary {
             background-color: #00265d;
             color: #fff;
         }

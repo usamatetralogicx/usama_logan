@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/', 'HomeController@index')->name('home');
+    Route::get('/home', 'HomeController@index')->name('home');
     Route::get('/link', 'HomeController@LinkSettings')->name('link');
     Route::get('/exports', 'HomeController@Exports')->name('exports');
     Route::get('/exports/download', 'HomeController@exportDownload')->name('exports.download');

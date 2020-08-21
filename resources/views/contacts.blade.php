@@ -69,7 +69,7 @@
                                 </td>
                             @endrole
                             <td class="text-right">
-                                <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit_modal_{{ $contact->id }}">View</button>
+                                <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#view_modal_{{ $contact->id }}">View</button>
                                 <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit_modal_{{ $contact->id }}">Edit</button>
                                 <a class="btn btn-primary btn-sm" href="{{ route('contact.delete', $contact->id) }}">Delete</a>
                             </td>
@@ -243,6 +243,57 @@
         </div>
     </div>
 
+
+    <div class="modal fade" id="view_modal_{{ $contact->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        {{ $contact->first_name }} {{ $contact->last_name }}
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>{{ $contact->prefix }} {{ $contact->first_name }} {{ $contact->last_name }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Address</td>
+                                    <td>{{ $contact->address }}<br>
+                                        {{ $contact->apt }}, {{ $contact->city }}, {{ $contact->state }}
+                                    <br>
+                                        {{ $contact->country }}, {{ $contact->zip }}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Email</td>
+                                    <td>{{ $contact->email }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Phone</td>
+                                    <td>{{ $contact->phone }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Date Of Birthday</td>
+                                    <td>{{ $contact->date }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Spouse/Partner</td>
+                                    <td>{{ $contact->spouce_prefix }} {{ $contact->spouce_first_name }} {{ $contact->spouce_last_name }}</td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                </div>
+            </div>
+        </div>
+    </div>
     @endforeach
 
 @endsection

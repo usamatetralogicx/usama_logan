@@ -14,8 +14,9 @@
 
                     @if($user->unique_code)
                         <div class="text-right">
-{{--                            <button type="button" class="btn btn-warning btn-sm">Copy Link</button>--}}
+                            <a href="javascript:void(0);" type="button" class="btn btn-warning btn-sm" id="copyBtn" data-clipboard-target="#copyTarget">Copy Link</a>
                             <a target="_blank" href="{{ env('APP_URL') }}/{{ $user->unique_code }}" class="btn btn-primary btn-sm">Preview Page</a>
+                            <input type="text" id="copyTarget" value="{{ env('APP_URL') }}/{{ $user->unique_code }}" style="display: none;">
                         </div>
                     @endif
 
@@ -54,4 +55,5 @@
             </div>
         </div>
     </div>
-@endsection
+
+    @endsection

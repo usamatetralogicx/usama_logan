@@ -14,7 +14,7 @@ class AddLinkFieldToUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->longText('unique_code')->nullable()->unique();
+            $table->longText('unique_code')->nullable();
         });
     }
 

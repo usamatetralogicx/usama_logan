@@ -41,9 +41,13 @@ class HomeController extends Controller
 
     public function UserLink($id){
         $user = User::where('unique_code', $id)->first();
-        return view('user-link')->with([
-            'user' => $user
-        ]);
+        if($user === null){
+            dd('404');
+        }else {
+            return view('user-link')->with([
+                'user' => $user
+            ]);
+        }
     }
 
     public function contacts(Contact $contact, Request $request){

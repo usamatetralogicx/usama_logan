@@ -107,7 +107,7 @@ class HomeController extends Controller
                 $update = true;
             }else {
                 $contact = new Contact();
-                $update = true;
+                $update = false;
             }
             $contact->prefix = $request->input('prefix');
             $contact->first_name = $request->input('first_name');
@@ -129,7 +129,7 @@ class HomeController extends Controller
             if($update){
                 return redirect()->back()->with('success', 'Contact Detail has been updated.');
             }else{
-                return redirect()->back()->with('success', 'Contact has been submitted.');
+                return redirect()->back()->with('success', 'Your contact details has been submitted.');
             }
     }
 

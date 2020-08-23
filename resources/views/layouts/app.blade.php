@@ -153,7 +153,7 @@
         $( document ).ready(function() {
             var clipboard = new ClipboardJS('#copyBtn');
             clipboard.on('success', function (e) {
-                $(e.trigger).text('copies');
+                $(e.trigger).text('copied Link');
             });
         });
 

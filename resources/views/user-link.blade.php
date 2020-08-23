@@ -100,14 +100,13 @@
 
     <div class="message-text text-center">
         <h1>
-            Logan would love your contact info.
+            {{ $user->name }} would love your contact info.
         </h1>
 
         <p>
             So please enter everything with loving care.
         </p>
     </div>
-
 
     <div class="row justify-content-center">
         <div class="col-md-8">

@@ -104,8 +104,10 @@ class HomeController extends Controller
         public function ContactsUpdate(Request $request){
             if($request->input('contact_id')) {
                 $contact = Contact::find($request->input('contact_id'));
+                $update = true;
             }else {
                 $contact = new Contact();
+                $update = true;
             }
             $contact->prefix = $request->input('prefix');
             $contact->first_name = $request->input('first_name');
@@ -124,8 +126,11 @@ class HomeController extends Controller
             $contact->spouce_last_name = $request->input('partner_last_name');
             $contact->user_id = $request->input('user');
             $contact->save();
-
-            return redirect()->back()->with('success', '');
+            if($update){
+                return redirect()->back()->with('success', 'Contact Detail has been updated.');
+            }else{
+                return redirect()->back()->with('success', 'Contact has been submitted.');
+            }
     }
 
     public function Exports(){

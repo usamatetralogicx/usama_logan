@@ -256,7 +256,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                        <table class="table table-striped">
+                        <table class="table table-striped table-responsive">
                             <tbody>
                                 <tr>
                                     <td><b>Name</b></td>

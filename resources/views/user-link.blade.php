@@ -111,6 +111,12 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
 
+            @if(session()->has('success'))
+                <div class="alert alert-success mb-4">
+                    {{ session()->get('success') }}
+                </div>
+            @endif
+
     <div class="card p-4">
         <form action="{{ route('contacts.post') }}" method="POST">
             {{ csrf_field() }}

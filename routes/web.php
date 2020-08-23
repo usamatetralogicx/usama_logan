@@ -25,12 +25,12 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/exports/download', 'HomeController@exportDownload')->name('exports.download');
     Route::post('/link/generate', 'HomeController@LinkGenerate')->name('link.generate');
     Route::get('/contacts', 'HomeController@Contacts')->name('contacts');
-    Route::post('/contacts', 'HomeController@ContactsUpdate')->name('contacts.post');
     Route::any('/users', 'HomeController@Users')->name('users');
     Route::get('/contact/{id}/delete', 'HomeController@ContactDelete')->name('contact.delete');
 });
 
 Route::get('/{id}', 'HomeController@UserLink')->name('user.link.view');
+Route::post('/contacts', 'HomeController@ContactsUpdate')->name('contacts.post');
 
 
 

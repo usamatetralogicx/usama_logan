@@ -64,7 +64,9 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
+                    @guest
+                        @else
+
                     <ul class="navbar-nav mr-auto text-center">
                         @role('admin')
                         <li class="nav-item">
@@ -91,6 +93,7 @@
                         </li>
                         @endrole
                     </ul>
+                    @endguest
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">

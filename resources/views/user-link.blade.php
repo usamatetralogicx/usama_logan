@@ -112,7 +112,7 @@
         <div class="col-md-8">
 
             @if(session()->has('success'))
-                <div class="alert alert-success mb-4 text-center font-weight-bold">
+                <div class="alert alert-success mb-3 text-center font-weight-bold">
                     {{ session()->get('success') }}
                 </div>
             @endif

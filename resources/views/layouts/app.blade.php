@@ -132,8 +132,8 @@
             </div>
         </nav>
 
-        <main class="py-4">
 
+        <main class="py-4">
             <div class="container">
                 @if(session()->has('success'))
                     <div class="alert alert-success">
@@ -141,10 +141,11 @@
                     </div>
                 @endif
             </div>
-
             @yield('content')
         </main>
+
     </div>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{{ asset('clipboard.js') }}"></script>
@@ -156,7 +157,6 @@
                 $(e.trigger).text('copied Link');
             });
         });
-
     </script>
 
 </body>

@@ -27,32 +27,9 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Contact $contact ,Request $request)
     {
-        return view('home');
-    }
-
-    public function LinkSettings(){
-        $user = Auth::user();
-        return view('link')->with([
-            'user' => $user
-        ]);
-    }
-
-    public function UserLink($id){
-        $user = User::where('unique_code', $id)->first();
-        if($user === null){
-            abort('404');
-        }else {
-            return view('user-link')->with([
-                'user' => $user
-            ]);
-        }
-    }
-
-    public function contacts(Contact $contact, Request $request){
         $contact_query = $contact->newQuery();
-
         if(Auth::user()->hasRole('user')){
             $contact_query->where('user_id', Auth::id());
         }else{
@@ -68,13 +45,55 @@ class HomeController extends Controller
         }
 
         $contacts = $contact_query->paginate(20);
-        return view('contacts')->with([
+        return view('new_contacts')->with([
+            'contacts' => $contacts,
+            'query' => $request->input('q'),
+            'user' => $request->input('user')
+        ]);
+//        return view('home');
+    }
+
+    public function LinkSettings(){
+        $user = Auth::user();
+        return view('new_link')->with([
+            'user' => $user
+        ]);
+    }
+
+    public function UserLink($id){
+        $user = User::where('unique_code', $id)->first();
+        if($user === null){
+            abort('404');
+        }else {
+            return view('new_user_link')->with([
+                'user' => $user
+            ]);
+        }
+    }
+
+    public function contacts(Contact $contact, Request $request){
+        $contact_query = $contact->newQuery();
+        if(Auth::user()->hasRole('user')){
+            $contact_query->where('user_id', Auth::id());
+        }else{
+            if($request->input('user')){
+                $contact_query->where('user_id', $request->input('user'));
+            }
+        }
+
+        if($request->input('q')){
+            $contact_query->where('first_name', 'like', '%' . $request->input('q') . '%');
+//            $contact_query->orWhere('last_name', 'like', '%' . $request->input('q') . '%');
+//            $contact_query->orWhere('email', 'like', '%' . $request->input('q') . '%');
+        }
+
+        $contacts = $contact_query->paginate(20);
+        return view('new_contacts')->with([
             'contacts' => $contacts,
             'query' => $request->input('q'),
             'user' => $request->input('user')
         ]);
     }
-
     public function Users(Request $request){
         if($request->input('q')){
             $users = User::role('user')
@@ -83,13 +102,12 @@ class HomeController extends Controller
         }else {
             $users = User::role('user')->paginate(20);
         }
-         return view('users')->with([
+         return view('new_user')->with([
              'users' => $users,
              'request' => $request->input('q')
          ]);
     }
-
-        public function LinkGenerate(Request $request){
+    public function LinkGenerate(Request $request){
             $validatedData = $request->validate([
                 'unique_code' => ['unique:users']
             ]);
@@ -134,7 +152,10 @@ class HomeController extends Controller
     }
 
     public function Exports(){
-        return view('exports');
+        return view('new_export');
+    }
+    public function Imports(){
+        return view('import');
     }
 
     public function exportDownload()
@@ -145,5 +166,15 @@ class HomeController extends Controller
     public function ContactDelete($id){
         Contact::find($id)->delete();
         return redirect()->back()->with('success', 'Contact Deleted Successfully.');
+    }
+    public  function Logout(){
+        Auth::logout();
+        return redirect('login');
+    }
+    public function alphabetic(Request $request)
+    {
+        $character =$request->value;
+        $seacrh=Contact::where('first_name','like',$character.'%')->get();
+        return response()->json(['success'=>$seacrh]);
     }
 }

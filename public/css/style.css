@@ -1,0 +1,380 @@
+@import "https://use.fontawesome.com/releases/v5.8.1/css/all.css";
+@import "https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap";
+@font-face{font-family:'Quickpen';src:url(fonts/Quickpen.woff2) format("woff2"),url(fonts/Quickpen.woff) format("woff");font-weight:400;font-style:normal}
+img{max-width:100%;height:auto}
+body {font-family:'Montserrat',sans-serif;}
+a,a:hover,a:focus,a:active{text-decoration:none;outline:none;transition:all .3s ease-in-out}
+.col-xs-15,.col-sm-15,.col-md-15,.col-lg-15{position:relative;min-height:1px;padding-right:10px;padding-left:10px}
+.col-xs-15{width:20%;float:left}
+@media (min-width: 768px) {
+.col-sm-15{width:20%;float:left}
+}
+@media (min-width: 992px) {
+.col-md-15{width:20%;float:left}
+}
+@media (min-width: 1200px) {
+.col-lg-15{width:20%;float:left}
+}
+.container-fluid{max-width:1800px}
+@media (min-width:1200px) {
+.container{width:100%;max-width:1320px;margin-left:auto;margin-right:auto}
+}
+.sing_up_main{width:586px;border:1px solid #e8e8e8;margin:95px auto;padding:20px 45px}
+.account h4{margin:0;padding:0;font-size:15px;font-family:'Montserrat',sans-serif;color:#333;font-weight:400;font-style:italic;text-align:right}
+.account h4 a{color:#333}
+.login h4{font-size:15px;color:#333;font-weight:700;font-family:'Montserrat',sans-serif;text-align:right}
+.login h4 a{color:#333}
+.sing_info h1{margin:0;padding:20px 0 60px;font-size:25px;color:#333;font-weight:700;font-family:'Montserrat',sans-serif}
+.input_name input{width:100%;border-bottom:1px solid #e8e8e8;border-right:0;border-left:0;border-top:0;font-size:15px;color:#333;font-weight:400;padding:10px 0;margin:0 0 15px;outline:none}
+.input_name{position:relative}
+.input_name span{position:absolute;right:7px;bottom:30px}
+.container_one{display:block;position:relative;padding-left:35px;margin-bottom:12px;cursor:pointer;font-size:22px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+.container_one input{position:absolute;opacity:0;cursor:pointer;height:0;width:0}
+.checkmark{position:absolute;top:29px;left:0;height:22px;width:22px;border:1px solid #e8e8e8;border-radius:5px}
+.checkmark:after{content:"";position:absolute;display:none}
+.container_one input:checked~.checkmark:after{display:block}
+.container_one .checkmark:after{left:8px;top:4px;width:5px;height:10px;border:solid #b38a5c;border-width:0 1px 1px 0;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}
+.checkbox label,.radio label{min-height:20px;margin-bottom:0;font-weight:400;cursor:pointer;font-size:13px;color:#333;font-weight:400;padding:31px 0 40px 40px;font-family:'Montserrat',sans-serif;font-weight:400}
+.checkbox input{width:0}
+.sing_info button{width:150px;height:50px;background-color:#b38a5c;color:#fff;font-weight:700;font-size:15px;font-family:'Montserrat',sans-serif;border:none;border-radius:5px;margin:0 auto;display:table;outline:none;margin-bottom:40px;transition:all .3s ease-in-out}
+.sing_info button:hover{transition:all .3s ease-in-out;background-color:#b38a5c91}
+.process_main h2{margin:0;padding:0 0 40px;font-size:30px;color:#000;font-family:'Montserrat',sans-serif;font-weight:400;text-align:center}
+.process_loop{border:1px solid #d33f6a;height:120px;width:120px;display:inline-flex;justify-content:center;align-items:center;border-radius:100%;position:relative}
+.process_loop span{position:absolute;left:-8px;background-color:#d33f6a;color:#fff;height:30px;width:30px;border-radius:100%;top:15px;font-family:'Playfair Display',serif;font-size:20px;font-weight:400;text-align:center;line-height: 24px}
+.process_sing h4{margin:0;padding:25px 0 19px;font-size:18px;color:#333;font-weight:700;text-align:center;font-family:'Montserrat',sans-serif;text-transform:uppercase}
+.process_sing{text-align:center}
+.process_sing p{margin:0 auto;padding:0 0 30px;font-size:15px;color:#333;font-family:'Montserrat',sans-serif;line-height:25px;max-width:230px;font-weight:400}
+.your_guest_list{text-align:center}
+.lis_part{padding-top:40px}
+.your_guest_list h4{margin:0;padding:23px 0 0;font-size:18px;color:#333;font-weight:700;font-family:'Montserrat',sans-serif}
+.your_guest_list p{margin:0;padding:20px 0;font-size:14px;color:#333;font-family:'Montserrat',sans-serif;font-weight:400;line-height:25px}
+.list{height:78px;display:inline-flex;justify-content:center;align-items:center}
+.bar_menu {
+    /* padding: 10px 0 0px; */
+    max-width: 483px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+.bar_menu ul{margin:0;padding:0;display:flex;justify-content:space-between;align-content:center}
+.bar_menu ul li{margin:0;padding:0;font-size:20px;color:#000;font-weight:400;font-family:'Montserrat',sans-serif;list-style-type:none;min-height:60px}
+.bar_menu ul li a{color:#000;padding:0 0 15px}
+.bar_menu ul li a.active, .bar_menu ul li a:hover{color:#b38a5c;border-bottom:2px solid #b38a5c}
+.link_form_main{border:1px solid #b9b9b9;max-width:852px;margin:0 auto;border-radius:5px;text-align:center;padding:47px 0}
+.link_form_main h4{margin:0;padding:20px 0 26px;font-size:20px;color:#333;font-weight:700;text-align:center;font-family:'Montserrat',sans-serif}
+.link_form_main p{margin:0 auto;padding:0;font-size:15px;color:#333;line-height:30px;font-family:'Montserrat',sans-serif;font-weight:400;max-width:460px}
+.link_form_main>h5{margin:24px auto;padding:0;font-size:15px;color:#333;font-weight:400;font-family:'Montserrat',sans-serif;border:1px solid #b9b9b9;height:40px;width:353px;display:inline-flex;justify-content:center;align-items:center;border-radius:5px}
+.link_form_main .btn{margin:0 auto 24px;background-color:#b38a5c;width:150px;height:50px;display:inline-flex;justify-content:center;align-items:center;border-radius:5px;color:#fff;font-size:15px;font-weight:700;border:none;outline:none;font-family:'Montserrat',sans-serif}
+.link_form_main .btn:hover{transition:all .3s ease-in-out;background-color:#b38a5c91;transition:all .3s ease-in-out;background-color:#b38a5c91}
+.select_button button:hover{transition:all .3s ease-in-out;background-color:#b38a5c91}
+.pearl_form button:hover{transition:all .3s ease-in-out;background-color:#b38a5c91}
+.link_form_main h6{margin:0;padding:0;font-size:15px;color:#b1b1b1;font-family:'Montserrat',sans-serif;font-weight:400}
+.link_form_main h6 span{color:#333}
+.link_form_main ul{margin:0;padding:40px 22px 0}
+.link_form_main ul li{margin:0;padding:20px 0;list-style-type:none;display:flex;justify-content:space-between}
+.import_img{width:10%}
+.import_txt{width:88%}
+.import_txt>h5{margin:0;padding:0 0 10px;font-weight:700;color:#333;font-size:20px;text-align:left;font-family:'Montserrat',sans-serif}
+.import_txt>p{text-align:left;max-width:100%}
+.import_txt>p a{color:#b48a5d;border-bottom:1px solid #b48a5d}
+.sheet>.btn{width:250px;margin:45px 0 16px}
+.link_form_main p a{color:#b38a5c;border-bottom:1px solid #b38a5c}
+.export_main{border:1px solid #b9b9b9;border-radius:5px;width:850px;margin:0px auto;padding:60px 0}
+.container_two{display:block;position:relative;margin-bottom:30px;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;font-size:20px;color:#333;font-weight:700;padding:0 24px;font-family:'Montserrat',sans-serif}
+.container_two input{position:absolute;opacity:0;cursor:pointer}
+.checkmark_one{position:absolute;top:15px;left:-9px;height:25px;width:25px;border-radius:50%;border:1px solid #d0d0d0}
+.checkmark_one:after{content:"";position:absolute;display:none}
+.container_two input:checked~.checkmark_one:after{display:block}
+.container_two .checkmark_one:after{top:7px;left:7px;width:8px;height:8px;border-radius:50%;background:#b38a5c}
+.export_form{max-width:365px;margin:0 auto}
+.export_form .btn{padding:0;background-color:#b38a5c;color:#fff;font-size:15px;font-weight:700;font-family:'Montserrat',sans-serif;display:inline-flex;justify-content:center;align-items:center;width:150px;height:50px;margin:0 auto;transition:all .3s ease-in-out}
+.export_form .btn:hover{transition:all .3s ease-in-out;background-color:#b38a5c91}
+.unable_exp{text-align:center}
+.Pearl{background-color:#f2ede7;padding:70px 0 84px}
+.pearl_main{margin:0 auto;max-width:810px}
+.pearl_main h1{margin:0;padding:0;font-size:51px;color:#161616;text-transform:uppercase;font-family:'Playfair Display',serif;text-align:center}
+.pearl_main h1 span{color:#b48a5d;font-family:'Quickpen';text-transform: capitalize;}
+.pearl_main p{margin:0;padding:50px 0 30px;font-size:30px;color:#333;text-align:center;font-weight:400;font-family:'Montserrat',sans-serif}
+.pearl_form{background-color:#fff;box-shadow:3px 2px 4px 3px #e8e1d9;padding:37px;border-radius:5px}
+.pearl_form h4{margin:0;padding:22px 15px 5px;display: inline-block; width: 100%; font-size:17px;color:#333;font-family:'Montserrat',sans-serif;font-weight:700}
+.peral_input select{width:100%;border:1px solid #b9b9b9;outline:none;margin:10px 0;height:40px;padding:9px;border-radius:5px;font-size:15px;color:#000;font-family:'Montserrat',sans-serif;font-weight:400}
+.peral_input input{width:100%;border:1px solid #b9b9b9;outline:none;margin:10px 0;height:40px;padding:9px;border-radius:5px;font-size:15px;color:#000;font-family:'Montserrat',sans-serif;font-weight:400}
+.peral_input input::placeholder{color:#000}
+.pearl_form button{width:100%;margin:30px 0 0;padding:0;font-size:15px;color:#fff;font-weight:700;font-family:'Montserrat',sans-serif;border:none;outline:none;background-color:#b38a5c;border-radius:5px;height:50px}
+.pere_cont>p{font-size:15px;margin:0;padding:18px 0 0;font-size:15px;color:#333;font-family:'Montserrat',sans-serif;font-weight:400}
+.contact_title{border:1px solid #b9b9b9;border-radius:5px}
+.contact_title h4{background-color:#b38a5c;margin:0;text-align:center;height:48px;border-radius:4px 4px 0 0;font-size:17px;color:#fff;font-weight:700;text-transform:uppercase;display:inline-flex;justify-content:center;align-items:center;width:100%}
+.serch_box{display:flex}
+.cotnact_form_part_2{padding:15px 20px}
+.add_main .btn{border:1px solid #b9b9b9;background-color:#e8e8e8;height:50px;width:50px;display:inline-flex;justify-content:center;align-items:center;margin:0 13px}
+.add_user .btn{border:1px solid #b38a5c;background-color:#b38a5c;height:50px;width:50px;display:inline-flex;justify-content:center;align-items:center;position:relative}
+.hover_add_button{position:absolute;z-index: 1; right:3%;border:1px solid #dcdcdc;padding:0 22px;border-radius:5px;top:66px;background-color:#fff;opacity:0;width:208px}
+.add_user:hover .hover_add_button{opacity:1}
+.add_plus{position:relative}
+.add_plus::after{position:absolute;content:'';width:20px;height:8px;background: url(images/up-arrow.png) no-repeat;top: -8.5px;background-size: contain; right:0;}
+.add_plus h3{margin:0;padding:12px 0;font-size:15px;color:#333;font-weight:400;font-family:'Montserrat',sans-serif}
+.add_plus h3 a{color:#333}
+.add_plus ul{margin:0;padding:0;display:flex;justify-content:space-between;align-items:center;width:100%;border-bottom:1px solid #e9e9e9}
+.add_plus ul li{padding:0;margin:0;font-size:15px;color:#333;font-weight:400;font-family:'Montserrat',sans-serif;list-style-type:none;padding:12px 0}
+.add_plus h3 span{padding:0 8px 0 0}
+.main_search input{border:1px solid #b9b9b9;height:50px;width:680px;border-radius:5px;color:#333;padding:10px;font-size:15px;font-weight:400;font-family:'Montserrat',sans-serif;outline:none}
+.main_search button {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    transform: translate(0,-50%);
+    outline: none;
+}
+.main_search{position:relative}
+.creat_new{text-align:center;max-width:545px;margin:27px auto}
+.creat_new h5{margin:0;padding:15px 0;font-size:15px;color:#333;font-weight:400;font-family:'Montserrat',sans-serif}
+.input_form_creat input{width:100%;border:1px solid #b9b9b9;border-radius:5px;outline:none;height:50px;padding:15px;margin:20px 0 10px}
+.input_form_creat button{width:100%;height:50px;border:none;border-radius:5px;color:#fff;font-weight:700;background-color:#b38a5c;display:inline-flex;justify-content:center;align-items:center;outline:none;transition:all .3s ease-in-out}
+.input_form_creat button:hover{transition:all .3s ease-in-out;background-color:#b38a5c91}
+.events{border:1px solid #b9b9b9;border-radius:5px}
+.events h4{margin:0;padding:0;display:inline-flex;justify-content:center;align-items:center;width:100%;background-color:#b38a5c;height:50px;border-radius:4px 4px 0 0;font-weight:700;font-family:'Montserrat',sans-serif;text-transform:uppercase;color:#fff;font-size:17px}
+.events_main ul{margin:0;padding:0}
+.events_main ul li{margin:0;padding:20px 28px;display:inline-flex;justify-content:space-between;width:100%}
+.events_img{width:10%}
+.events_txt{width:85%}
+.events_txt h5{margin:0;padding:0;font-size:20px;color:#b38a5c;font-weight:700;font-family:'Montserrat',sans-serif;line-height:20px}
+.events_txt h6{font-size:15px;color:#b6b5b5;font-family:'Montserrat',sans-serif;font-weight:400;margin:0;padding:10px 0 0}
+.events_txt h6 a{color:#b6b5b5}
+.events_txt h6 a:hover{color:#b38a5c}
+.events_txt p{margin:0;padding:4px 0;font-size:15px;color:#333;font-family:'Montserrat',sans-serif;font-weight:400}
+.events_txt h3{margin:0;padding:0;font-size:18px;color:#b38a5c;font-family:'Montserrat',sans-serif;font-weight:400}
+.events_txt h3 span{font-weight: 600}
+.messages{border:1px solid #b9b9b9;border-radius:5px;margin-top:20px;padding:0 14px;margin-bottom:50px}
+.messages h4{margin:0;padding:18px 0;font-size:20px;color:#b38a5c;font-family:'Montserrat',sans-serif;font-weight:700;border-bottom:1px solid #e6e6e6}
+.faq h6{margin:0;padding:18px 0;font-size:17px;color:#333;font-family:'Montserrat',sans-serif;font-weight:400}
+.panel p{margin:0;padding:0 0 14px;font-size:16px;line-height:25px;color:#333;font-family:'Montserrat',sans-serif;font-weight:400}
+.words_menu ul{margin:0;padding:20px 12px 0;display:flex;justify-content:space-between;align-items:center;width:100%}
+.words_menu ul li{margin:0;padding:0;font-size:15px;color:#333;list-style-type:none;font-family:'Montserrat',sans-serif;font-weight:400;text-transform:uppercase}
+.words_menu ul li a{color:#333;width:25px;height:25px;display:inline-flex;justify-content:center;align-items:center;border-radius:4px}
+.words_menu ul li a:hover{color:#fff;background-color:#b38a5c}
+.faq_title_shape{position:relative}
+.faq_left_icon{position:absolute;top:-40px}
+.faq_1 {
+    border-bottom: 1px solid #b9b9b9;
+    /* padding-left: 16px; */
+    padding: 0 16px;
+}
+.faq_1:last-child{border-bottom:0px;}
+.faq_1 h6{margin:0;padding:20px 35px;font-size:15px;color:#333;font-weight:400;font-family:'Montserrat',sans-serif;cursor: pointer;}
+.faq_right_icon{position:absolute;right:0;top:-40px}
+.faq_submit>h4{background-color:transparent;color:#333;text-transform:capitalize;display:inline-flex;justify-content:end;font-weight:700;font-family:'Montserrat',sans-serif;font-size:17px;margin:0;padding:0 15px}
+.container_select{display:block;position:relative;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;font-size:17px;margin:0;padding:0 0 0 34px;font-weight:400;color:#b38a5c;font-family:'Montserrat',sans-serif}
+.select_all_button{padding-bottom:25px}
+.container_select input{position:absolute;opacity:0;cursor:pointer;height:0;width:0}
+.checkmark_select{position:absolute;top:0;left:0;height:20px;width:20px;border:2px solid #b38a5c;border-radius:5px}
+.checkmark_select:after{content:"";position:absolute;display:none}
+.container_select input:checked~.checkmark_select:after{display:block}
+.container_select .checkmark_select:after{left:6px;top:2px;width:5px;height:10px;border:solid #b38a5c;border-width:0 1px 1px 0;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}
+.all_contacts_form ul{padding:0;margin:0}
+.all_contacts_form ul li{padding:14px 0;margin:0;list-style-type:none;border-bottom:1px solid #b9b9b9;font-size:15px;color:#333;font-weight:400;font-family:'Montserrat',sans-serif}
+.container_Logan{display:block;position:relative;padding-left:35px;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;font-weight:400;font-family:'Montserrat',sans-serif}
+.container_Logan input{position:absolute;opacity:0;cursor:pointer;height:0;width:0}
+.checkmark_Logan{position:absolute;top:0;left:0;height:20px;width:20px;border:1px solid #b9b9b9;border-radius:4px}
+.container_Logan input:checked~.checkmark_Logan{border:1px solid #b38a5c;border-radius:4px}
+.checkmark_Logan:after{content:"";position:absolute;display:none}
+.container_Logan input:checked~.checkmark_Logan:after{display:block}
+.container_Logan .checkmark_Logan:after{left:6px;top:3px;width:5px;height:10px;border:solid #b38a5c;border-width:0 1px 1px 0;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}
+.select_button button{background-color:#b38a5c;outline:none;border:none;margin:40px auto 25px;display:table;font-size:15px;font-weight:700;color:#fff;border-radius:5px;min-width:542px;height:50px}
+.faq_heading_product h3{margin:0;padding:20px 0;font-size:17px;color:#333;font-weight:400;font-family:'Montserrat',sans-serif;float:left;width:100%;cursor:pointer}
+.faq_heading_product h3 span{float:right}
+.faq_content2 {word-break: break-word;}
+.faq_content2 p{margin:0;padding:0;font-size:17px;color:#333;line-height:25px;font-weight:400;font-family:'Montserrat',sans-serif}
+.faq_content2 p span{color:#b38a5c;font-weight:700}
+.faq_content2>h4{margin:0;padding:15px 0 0;font-size:17px;color:#b38a5c;font-weight:400;font-family:'Montserrat',sans-serif;border-bottom:1px solid #b38a5c;display:table}
+.faq_content2 h4 a{color:#b38a5c}
+.faq_content2 .btn{margin:22px 0;padding:0;background-color:#b38a5c;color:#fff;width:250px;height:50px;font-weight:700;font-family:'Montserrat',sans-serif;display:inline-flex;justify-content:center;align-items:center}
+.faq_content2 .btn:hover{transition:all .3s ease-in-out;background-color:#b38a5c91}
+.add_user{position:relative}
+
+@media only screen and (min-width:200px) and (max-width:767px) {
+.sing_up_main{width:100%;padding:20px 25px;margin:50px auto}
+.account h4{font-size:12px}
+.login h4{font-size:12px}
+.sing_info h1{padding:15px 0 40px;font-size:18px}
+.sing_info button{width:130px;height:40px;font-size:12px;margin-bottom:15px}
+.process_main h2{padding:0 0 30px;font-size:24px}
+.process_main .col-xs-12{width:50%}
+.process_loop{height:70px;width:70px}
+.process_sing h4{padding:22px 0 15px;font-size:14px}
+.process_loop img{height:25px}
+.process_loop span{left:-3px;height:20px;width:20px;top:6px;font-size:16px}
+.process_sing p{padding:0 0 22px;font-size:12px;line-height:20px}
+.your_guest_list h4{padding:18px 0 0;font-size:14px;line-height:25px;min-height:75px}
+.your_guest_list p{padding:11px 0;font-size:12px;line-height:20px}
+.bar_menu{padding:30px 0 10px;max-width:320px}
+.bar_menu ul li{font-size:14px}
+.link_form_main h4{padding:16px 0 22px;font-size:16px}
+.link_form_main p{font-size:12px;line-height:25px}
+.link_form_main>h5{font-size:12px;width:100%}
+.link_form_main{padding:40px 10px}
+.link_form_main .btn{width:130px;height:44px;font-size:12px}
+.link_form_main h6{font-size:14px;line-height:20px}
+.export_main{width:100%;padding:34px 0}
+.container_two{margin-bottom:30px;font-size:12px;padding:0 20px}
+.export_form{max-width:249px}
+.export_form .btn{font-size:12px;width:125px;height:45px}
+.import_txt>h5{font-size:16px}
+.sheet>.btn{width:185px!important;margin:40px 0 16px}
+.pearl_main h1{font-size:24px}
+.pearl_main p{padding:30px 0 20px;font-size:14px;line-height:25px}
+.pearl_form{padding:30px}
+.pearl_form h4{font-size:15px}
+.main_search input{width:100%;font-size:10px}
+.words_menu ul{display:inline-block}
+.words_menu ul li{margin:10px 0 0;float:left}
+.select_button button{min-width:100%}
+.events{margin-top:20px}
+.contact_title h4{font-size:15px}
+.events h4{font-size:14px}
+.events_txt h5{font-size:14px}
+.events_txt h6{font-size:12px}
+.events_txt p{font-size:12px}
+.events_txt h3{padding:10px 0 0;font-size:14px}
+.messages h4{padding:14px 0;font-size:14px}
+.faq h6{font-size:12px}
+.panel p{font-size:12px}
+.cotnact_form_part_2{padding:15px 20px}
+.events_main ul li{padding:16px 28px}
+.faq_heading_product h3{padding:16px 0;font-size:14px;line-height:25px}
+.faq_content2 p{font-size:13px}
+.hover_add_button{right:8%}
+}
+@media only screen and (min-width:500px) and (max-width:768px) {
+.link_form_main>h5{width:353px}
+.cotnact_form_part_2{padding:15px 20px}
+.events_main ul li{margin:0;padding:12px 28px 22px;display:inline-flex;justify-content:space-between;width:100%}
+.faq_heading_product h3{font-size:15px;line-height:25px}
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) {
+.sing_up_main{margin:65px auto}
+.process_main h2{font-size:25px}
+.process_loop img{height:35px}
+.process_loop{height:95px;width:95px}
+.process_loop span{left:-5px;height:25px;width:25px;top:10px;font-size:16px}
+.process_sing h4{padding:22px 0 15px;font-size:14px}
+.process_sing p{padding:0 0 15px;font-size:12px;line-height:22px}
+.your_guest_list h4{padding:18px 0 0;font-size:14px;line-height:22px;min-height:60px}
+.your_guest_list p{padding:14px 0;font-size:12px;line-height:24px}
+.export_main{width:700px}
+.container_two{font-size:18px}
+.bar_menu ul li{font-size:16px}
+.link_form_main h4{padding:20px 0 26px;font-size:18px}
+.link_form_main p{font-size:14px;line-height:25px}
+.import_txt>h5{padding:0 0 10px;font-size:18px}
+.sheet>.btn{width:220px;margin:40px 0 16px}
+.pearl_main h1{font-size:34px}
+.pearl_main p{padding:30px 0 18px;font-size:14px}
+.main_search input{width:299px}
+.words_menu ul{display:inline-block}
+.words_menu ul li{margin:0 0 8px;float:left}
+.select_button button{min-width:80%}
+.contact_title h4{font-size:14px}
+.events h4{font-size:14px}
+.events_txt h5{font-size:14px}
+.events_txt h6{font-size:14px}
+.events_txt p{font-size:12px;line-height:20px}
+.events_txt h3{font-size:12px}
+.messages h4{font-size:14px}
+.faq_heading_product h3 {font-size: 14px;}
+.faq h6{font-size:14px;line-height:20px}
+.panel p{font-size:12px}
+.faq_content2 p{font-size:14px}
+.faq_content2 .btn{width:160px;font-size:14px}
+.events_main ul li{padding:12px 13px}
+.bar_menu {padding: 50px 0 20px;}
+}
+@media only screen and (min-width:992px) and (max-width:1199px) {
+.process_main h2{font-size:28px}
+.process_loop img{height:40px}
+.process_loop{height:100px;width:100px}
+.process_loop span{height:28px;width:28px;top:10px;font-size:18px}
+.your_guest_list h4{font-size:14px}
+.process_sing h4{font-size:14px}
+.main_search input{width:448px}
+.words_menu ul{display:inline-block}
+.words_menu ul li{margin:0 0 8px;float:left}
+.events_txt h5{font-size:16px;line-height:20px}
+.events_txt h6{font-size:14px}
+.events_txt p{font-size:13px}
+.events_txt h3{padding:5px 0 0;font-size:14px}
+.messages h4{font-size:14px}
+.events_main ul li{padding:16px 15px}
+}
+@media only screen and (min-width:1200px) and (max-width:1367px) {
+.container{max-width:1170px}
+.main_search input{width:583px}
+.events_main ul li{padding:15px 28px}
+.faq_heading_product h3{font-size:15px}
+.events_txt h5 {font-size: 18px;}
+}
+.peral_input.buttons {
+    padding-bottom: 20px;
+}
+.flex {
+    display: flex;
+    margin: auto;
+    width: 500px;
+    padding-bottom: 5px;
+}
+.flex-main {
+    width: 100%;
+}
+.bt {
+    height: 34px !important;
+
+}
+.button{
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+.flex_1{
+    display: flex;
+    padding-bottom: 5px;
+}
+.custom_btn{
+    background-color: #b38a5c;
+    color: white;
+}
+.pagination > li > a,
+.pagination > li > span {
+    color: #b38a5c; // use your own color here
+}
+
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover {
+    background-color: #b38a5c;
+    border-color: #b38a5c ;
+
+}
+.text-center.find {
+    margin: 10px;
+}
+.flex_2 {
+    display: flex;
+    /* padding-bottom: 5px; */
+    width: 100%;
+}
+.user_1 {
+    width: 25%;
+}
+.user_2 {
+    width: 40%;
+}
+.user_3 {
+    width: 25%;
+}
+.user_4 {
+    width: 5%;
+}

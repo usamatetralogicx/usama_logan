@@ -10,7 +10,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+{{--    <script src="{{ asset('js/app.js') }}" defer></script>--}}
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -18,6 +18,12 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+{{--    Custom style --}}
+    <link href="{{asset('css/style.css')}}" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     <style>
         .navbar-nav .nav-link, .navbar-nav .nav-link:hover,.navbar-brand, .navbar-brand:hover {
@@ -147,7 +153,7 @@
     </div>
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+{{--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>--}}
     <script src="{{ asset('clipboard.js') }}"></script>
 
     <script>
@@ -158,6 +164,6 @@
             });
         });
     </script>
-
+@yield('scripts')
 </body>
 </html>

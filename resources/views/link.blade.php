@@ -9,6 +9,11 @@
                     <div class="card-header">
                         Link
                     </div>
+                    @if(session()->has('success'))
+                        <div class="alert alert-success mb-3 text-center font-weight-bold">
+                            {{ session()->get('success') }}
+                        </div>
+                    @endif
 
                     <div class="p-4">
 
@@ -31,7 +36,7 @@
                     </p>
 
             <form action="{{ route('link.generate') }}" method="POST" >
-                {{ csrf_field() }}
+             @csrf
                     <div class="form-group">
                         <div class="input-group mb-2">
                             <div class="input-group-prepend">
